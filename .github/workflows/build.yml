@@ -2,9 +2,9 @@ name: Build
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build:
@@ -15,7 +15,6 @@ jobs:
 
       - name: Build
         run: |
-          cd Trufflehound
           xcodebuild -scheme Trufflehound \
             -configuration Debug \
             build \
